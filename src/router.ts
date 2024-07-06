@@ -16,7 +16,7 @@ class PlumberRouter<T> {
                 if (middleware.type === "pipe") {
                     await middleware.handle(req);
                 } else if (middleware.type === "filter") {
-                    req.parameter = await middleware.handle(req) as T;
+                    req.parameter = await middleware.handle(req);
                 }
             }
             next();
