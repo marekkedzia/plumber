@@ -1,5 +1,5 @@
 {
-  "name": "plumber",
+  "name": "plumber-router",
   "version": "0.0.0",
   "main": "dist/index.js",
   "author": "Marek Kedzia",
