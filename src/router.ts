@@ -18,6 +18,7 @@ class PlumberRouter<T> {
         const methodStatusCode = config[`${method}StatusCode`];
 
         this.router[method](path,
+            // @ts-ignore
             async (req: ParameterizedRequest<T>, _: Response, next: NextFunction) => {
                 for (const middleware of pipesAndFilters) {
                     if (middleware.type === "pipe") {
@@ -28,7 +29,7 @@ class PlumberRouter<T> {
                 }
                 next();
             }, (req: Request, res: Response) => {
-                res.status(methodStatusCode || 200).json(req.body);
+                res.status(methodStatusCode).json(req.body);
             });
     }
 
