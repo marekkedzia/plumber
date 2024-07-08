@@ -6,7 +6,7 @@ on:
       - v*-release
 
 env:
-  MEDCASE_GITHUB_TOKEN: ${{ secrets.PLUMBER_GITHUB_TOKEN }}
+  PLUMBER_GITHUB_TOKEN: ${{ secrets.PLUMBER_GITHUB_TOKEN }}
 
 jobs:
   deploy:
