@@ -1,7 +1,7 @@
 import {RouterPath} from "./router.config";
 
 type RouterCustomParameters = {
-    path: RouterPath;
+    path?: RouterPath;
 }
 
 export {RouterCustomParameters};
