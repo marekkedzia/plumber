@@ -1,6 +1,6 @@
 {
-  "name": "plumber-router",
-  "version": "0.0.3",
+  "name": "@marekkedzia/plumber-router",
+  "version": "0.0.9",
   "main": "dist/index.js",
   "author": "Marek Kedzia",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
-    "url": "git@github.com:marekkedza/plumber-router.git"
+    "url": "git://github.com/marekkedza/plumber-router.git"
   },
   "files": [
     "dist",
