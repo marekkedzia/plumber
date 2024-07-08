@@ -1,7 +1,7 @@
-import {RouterPath} from "./router.config";
+import {getRouterPath} from "./router.config";
 
 type RouterCustomParameters = {
-    path?: RouterPath;
+    path?: getRouterPath;
 }
 
 export {RouterCustomParameters};

@@ -6,14 +6,14 @@ import {RouterCustomParameters} from "./interfaces/router.custom.parameters";
 import {config} from "./config";
 import {HttpMethod} from "./interfaces/http.methods";
 
-class PlumberRouter<T> {
+class PlumberRouter {
     router: Router;
 
     constructor(private routerConfig: RouterConfig) {
         this.router = Router();
     }
 
-    private registerRoute(method: HttpMethod, pipesAndFilters: RouterMiddleware<T>[], customParameters?: RouterCustomParameters) {
+    private registerRoute<T>(method: HttpMethod, pipesAndFilters: RouterMiddleware<T>[], customParameters?: RouterCustomParameters) {
         const path = customParameters?.path || this.routerConfig.path;
         const methodStatusCode = config[`${method}StatusCode`];
 
