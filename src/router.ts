@@ -33,7 +33,7 @@ class PlumberRouter {
             });
     }
 
-    register(method: HttpMethod, pipesAndFilters: RouterMiddleware<T>[], customParameters?: RouterCustomParameters) {
+    register<T>(method: HttpMethod, pipesAndFilters: RouterMiddleware<T>[], customParameters?: RouterCustomParameters) {
         this.registerRoute(method, pipesAndFilters, customParameters);
     }
 }
