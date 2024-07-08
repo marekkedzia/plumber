@@ -6,7 +6,7 @@ import {RouterCustomParameters} from "./interfaces/router.custom.parameters";
 import {config} from "./config";
 import {HttpMethod} from "./interfaces/http.methods";
 
-class PlumberRouter {
+class Plumber {
     router: Router;
 
     constructor(private routerConfig: RouterConfig) {
@@ -38,4 +38,4 @@ class PlumberRouter {
     }
 }
 
-export {PlumberRouter};
+export {Plumber};
