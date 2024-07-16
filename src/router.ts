@@ -1,11 +1,10 @@
-import {Router, Request, Response, NextFunction} from 'express';
+import {Router, Response, NextFunction} from 'express';
 import {RouterConfig} from "./interfaces/router.config";
 import {ParameterizedRequest} from "./interfaces/parameterized.request";
 import {RouterMiddleware} from "./interfaces/router.middleware";
 import {RouterCustomParameters} from "./interfaces/router.custom.parameters";
 import {config} from "./config";
 import {HttpMethod} from "./interfaces/http.methods";
-import "express-async-errors";
 
 class Plumber {
     router: Router;
@@ -29,8 +28,8 @@ class Plumber {
                     }
                 }
                 next();
-            }, (req: Request, res: Response) => {
-                return res.status(methodStatusCode).json(req.body);
+            }, (req: ParameterizedRequest<T>, res: Response) => {
+                return res.status(methodStatusCode).json(req.parameter);
             });
     }
 
