@@ -5,6 +5,7 @@ import {RouterMiddleware} from "./interfaces/router.middleware";
 import {RouterCustomParameters} from "./interfaces/router.custom.parameters";
 import {config} from "./config";
 import {HttpMethod} from "./interfaces/http.methods";
+import "express-async-errors";
 
 class Plumber {
     router: Router;
@@ -29,7 +30,7 @@ class Plumber {
                 }
                 next();
             }, (req: Request, res: Response) => {
-                res.status(methodStatusCode).json(req.body);
+                return res.status(methodStatusCode).json(req.body);
             });
     }
 

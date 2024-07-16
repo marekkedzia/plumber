@@ -2,8 +2,8 @@ name: Upload
 
 on:
   push:
-    tags:
-      - "*release"
+    branches:
+      - main
 
 env:
   PLUMBER_GITHUB_TOKEN: ${{ secrets.PLUMBER_GITHUB_TOKEN }}
