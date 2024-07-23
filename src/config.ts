@@ -1,5 +1,5 @@
 const config = {
-    routerPathRegex: /^\/[a-zA-Z0-9_.-]*[^\/]$/,
+    routerPathRegex: /^\/[a-zA-Z0-9_.-]*(\/:[a-zA-Z0-9_]+)*\/?$/,
     postStatusCode: 201,
     deleteStatusCode: 204,
     putStatusCode: 200,
